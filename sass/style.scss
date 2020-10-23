@@ -22,6 +22,7 @@
 @import "components/buttons";
 
 //layout
+@import "layout/layout";
 @import "layout/header";
 @import "layout/footer";
 
@@ -30,4 +31,7 @@
 
 //themes
 @import "themes/default";
+@import "themes/print";
+
+
 

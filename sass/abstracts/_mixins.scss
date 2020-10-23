@@ -86,7 +86,7 @@
 	}
 }
 
-
+/// mixin for media query
 @mixin media_query-up ($size) {
     @each $item, $value in $media_queries-up {
         @if $item == $size {
