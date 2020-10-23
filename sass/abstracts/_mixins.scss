@@ -9,7 +9,7 @@
 /// @param $self - current selector
 
 /// 1. plain visited hover active focus
-@mixin on_event_vhaf ($self: false) {
+@mixin on-event-vhaf ($self: false) {
 	@if $self {
 		&, &:visited, &:hover, &:active, &:focus {
 			@content;
@@ -21,7 +21,7 @@
 	}
 }
 /// 2. plain hover active focus. no rules for visited
-@mixin on_event_haf  ($self: false) {
+@mixin on-event-haf  ($self: false) {
 	@if $self {
 		&, &:hover, &:active, &:focus {
 			@content;
@@ -34,7 +34,7 @@
 }
 
 /// 3. plain hover
-@mixin on_event_h ($self: false) {
+@mixin on-event-h ($self: false) {
 	@if $self {
 		&, &:hover {
 			@content;
@@ -47,7 +47,7 @@
 }
 
 /// 4. plain active focus
-@mixin on_event_af ($self: false) {
+@mixin on-event-af ($self: false) {
 	@if $self {
 		&, &:active, &:focus {
 			@content;
@@ -61,7 +61,7 @@
 
 
 /// 5. plain hover active
-@mixin on_event_ha ($self: false) {
+@mixin on-event-ha ($self: false) {
 	@if $self {
 		&, &:hover, &:active {
 			@content;
@@ -74,7 +74,7 @@
 }
 
 /// 6. plain hover focus
-@mixin on_event_hf ($self: false) {
+@mixin on-event-hf ($self: false) {
 	@if $self {
 		&, &:hover, &:focus {
 			@content;
@@ -87,8 +87,8 @@
 }
 
 /// mixin for media query
-@mixin media_query-up ($size) {
-    @each $item, $value in $media_queries-up {
+@mixin media-query-up ($size) {
+    @each $item, $value in $media-queries-up {
         @if $item == $size {
             @if map-get($value, "breakpoint") != null {
                 @media only screen and #{map-get($value, "breakpoint")} {
@@ -101,18 +101,18 @@
 
 
 
-/// if $margin top and bottom are not given it takes values from $margin_base-less  $margin_base-more
+/// if $margin top and bottom are not given it takes values from $margin-base-less  $margin-base-more
 /// if $margin left and right not given it takes auto
 @mixin gutter(
-  $less_more: true,
+  $less-more: true,
   $right: auto,
   $left: $right,
-  $margin_base-less:$margin_base-less,
-  $margin_base-more:$margin_base-more)
+  $margin-base-less:$margin-base-less,
+  $margin-base-more:$margin-base-more)
   {
-    @if $less_more {
-      margin: $margin_base-less $right $margin_base-more $left;
+    @if $less-more {
+      margin: $margin-base-less $right $margin-base-more $left;
     } @else {
-      margin: $margin_base-more $right $margin_base-less $left;
+      margin: $margin-base-more $right $margin-base-less $left;
     }
 }

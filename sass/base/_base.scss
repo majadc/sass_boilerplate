@@ -9,8 +9,8 @@ html {
 	padding:0;
 }
 body {
-	font-size: $font_size_base-small;
-	line-height: $line_height-base;
+	font-size: $font-size-base-small;
+	line-height: $line-height-base;
 	@include font ($font-main, normal, $font-normal);
 	vertical-align: baseline;
 	
