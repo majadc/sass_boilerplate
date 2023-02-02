@@ -5,19 +5,21 @@ html {
 
 *, *::after, *::before {
 	box-sizing: inherit;
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 }
+
 body {
 	font-size: $font-size-base-small;
 	line-height: $line-height-base;
+
 	@include font ($font-main, normal, $font-normal);
+
 	vertical-align: baseline;
-	
 }
 
 a {
-	@include on-event-haf() {
-		
+	@include on-event-haf {
+
 	}
 }

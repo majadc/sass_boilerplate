@@ -1,0 +1,25 @@
+{
+  "name": "sass_boilrerplate",
+  "version": "1.0.0",
+  "description": "using sass [7-1 architecture pattern](https://sass-guidelin.es/#architecture)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"stylelint": "stylelint **/*.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/majadc/sass_boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/majadc/sass_boilerplate/issues"
+  },
+  "homepage": "https://github.com/majadc/sass_boilerplate#readme",
+  "devDependencies": {
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard-scss": "^6.1.0"
+  }
+}

@@ -1,15 +1,15 @@
 /// font family
-@mixin font ($font-family, $font-style:inherit, $font-weight:inherit) {
+@mixin font($font-family, $font-style:inherit, $font-weight:inherit) {
 	font-family: $font-family;
 	font-style: $font-style;
-	font-weight: $font-weight;	
+	font-weight: $font-weight;
 }
 
 /// link hover visited active focus
 /// @param $self - current selector
 
 /// 1. plain visited hover active focus
-@mixin on-event-vhaf ($self: false) {
+@mixin on-event-vhaf($self: false) {
 	@if $self {
 		&, &:visited, &:hover, &:active, &:focus {
 			@content;
@@ -20,8 +20,9 @@
 		}
 	}
 }
+
 /// 2. plain hover active focus. no rules for visited
-@mixin on-event-haf  ($self: false) {
+@mixin on-event-haf($self: false) {
 	@if $self {
 		&, &:hover, &:active, &:focus {
 			@content;
@@ -34,7 +35,7 @@
 }
 
 /// 3. plain hover
-@mixin on-event-h ($self: false) {
+@mixin on-event-h($self: false) {
 	@if $self {
 		&, &:hover {
 			@content;
@@ -47,7 +48,7 @@
 }
 
 /// 4. plain active focus
-@mixin on-event-af ($self: false) {
+@mixin on-event-af($self: false) {
 	@if $self {
 		&, &:active, &:focus {
 			@content;
@@ -59,9 +60,8 @@
 	}
 }
 
-
 /// 5. plain hover active
-@mixin on-event-ha ($self: false) {
+@mixin on-event-ha($self: false) {
 	@if $self {
 		&, &:hover, &:active {
 			@content;
@@ -74,7 +74,7 @@
 }
 
 /// 6. plain hover focus
-@mixin on-event-hf ($self: false) {
+@mixin on-event-hf($self: false) {
 	@if $self {
 		&, &:hover, &:focus {
 			@content;
@@ -87,32 +87,29 @@
 }
 
 /// mixin for media query
-@mixin media-query-up ($size) {
-    @each $item, $value in $media-queries-up {
-        @if $item == $size {
-            @if map-get($value, "breakpoint") != null {
-                @media only screen and #{map-get($value, "breakpoint")} {
-                    @content;
-                }
-            }//if
-        }//if
-    }//each
-}//mixin media-query-up
-
-
+@mixin media-query-up($size) {
+	@each $item, $value in $media-queries-up {
+		@if $item == $size {
+			@if map-get($value, "breakpoint") != null {
+				@media only screen and #{map-get($value, "breakpoint")} {
+					@content;
+				}
+			} // if
+		} // if
+	} // each
+} // mixin media-query-up
 
 /// if $margin top and bottom are not given it takes values from $margin-base-less  $margin-base-more
 /// if $margin left and right not given it takes auto
 @mixin gutter(
-  $less-more: true,
-  $right: auto,
-  $left: $right,
-  $margin-base-less:$margin-base-less,
-  $margin-base-more:$margin-base-more)
-  {
-    @if $less-more {
-      margin: $margin-base-less $right $margin-base-more $left;
-    } @else {
-      margin: $margin-base-more $right $margin-base-less $left;
-    }
+	$less-more: true,
+	$right: auto,
+	$left: $right,
+	$margin-base-less:$margin-base-less,
+	$margin-base-more:$margin-base-more) {
+	@if $less-more {
+		margin: $margin-base-less $right $margin-base-more $left;
+	} @else {
+		margin: $margin-base-more $right $margin-base-less $left;
+	}
 }

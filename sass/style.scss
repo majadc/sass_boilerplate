@@ -4,34 +4,31 @@
 /// @link https://sass-guidelin.es/#architecture
 /// @link https://github.com/HugoGiraudel/sass-boilerplate
 
-//abstracts
+// abstracts
 @import "abstracts/variables";
 @import "abstracts/functions";
 @import "abstracts/mixins";
 
-//vendors normalize
+// vendors normalize
 @import "vendors/normalize";
 
-//base
+// base
 @import "base/base";
 @import "base/fonts";
 @import "base/typography";
 @import "base/helpers";
 
-//components
+// components
 @import "components/buttons";
 
-//layout
+// layout
 @import "layout/layout";
 @import "layout/header";
 @import "layout/footer";
 
-//pages
+// pages
 @import "pages/home";
 
-//themes
+// themes
 @import "themes/default";
 @import "themes/print";
-
-
-

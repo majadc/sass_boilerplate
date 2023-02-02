@@ -1,9 +1,8 @@
 /// @type list
 
 /// font
-$font-main: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-$font-monospace: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace;
-
+$font-main: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$font-monospace: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace;
 
 /// font's weights
 $font-light: 300;
@@ -11,50 +10,38 @@ $font-normal: 400;
 $font-semi-bold: 600;
 $font-bold: 700;
 
-
 /// colors
 /// @type Color
 
-
 /// Container's maximum width
 /// @type  Length
-$page-width-max: 73.75rem; //1180px;
+$page-width-max: 73.75rem; // 1180px;
 $page-width-min: 50rem;
-
-
 
 //// @type Map
 /// if 1rem = 16px => { 576px = 36em; 768px = 48em; 992px = 62em; 1200px = 75em; }
 $media-queries-up: (
-    'small': (
-        "breakpoint": '(min-width: 36em)',
-    ),
-    'medium': (
-        "breakpoint": '(min-width: 48em)',
-    ),
-    'large': (
-        "breakpoint": '(min-width: 62em)',
+	"small": (
+		"breakpoint": "(min-width: 36em)",
 	),
-    'x-large': (
-        "breakpoint": '(min-width: 75em)',
-    )
+	"medium": (
+		"breakpoint": "(min-width: 48em)",
+	),
+	"large": (
+		"breakpoint": "(min-width: 62em)",
+	),
+	"x-large": (
+		"breakpoint": "(min-width: 75em)",
+	)
 );
 
-
 /// font size
-
 $font-size-base-small: 1rem;
 $font-size-base-medium: 1.1rem;
 $font-size-base-large: 1.2rem;
 $line-height-base: 1.6;
 
-
 /// margins
-
 $margin-base: 1em;
 $margin-base-less: 1em;
 $margin-base-more: 1.5em;
-
-
-
-
