@@ -1,4 +1,3 @@
 sass_boilerplate.code-workspace
 node_modules/
 package-lock.json
-sass/vendors/_normalize.scss
